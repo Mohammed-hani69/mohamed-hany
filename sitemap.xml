@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://mohammed-hani69.github.io/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mohammed-hani69.github.io/img/my%20photo.jpg</image:loc>
+      <image:title>صورة محمد هاني</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mohammed-hani69.github.io/img/starcatcher.jpg</image:loc>
+      <image:title>لعبة كأس العالم</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mohammed-hani69.github.io/img/athrfashion.com.jpeg</image:loc>
+      <image:title>ماركة ملابس مصرية</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mohammed-hani69.github.io/img/es-travel.jpeg</image:loc>
+      <image:title>نظام إدارة سياحة</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mohammed-hani69.github.io/img/al-7esa.com.jpeg</image:loc>
+      <image:title>منصة الحصه التعليمية</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mohammed-hani69.github.io/img/es-gift.com.jpeg</image:loc>
+      <image:title>متجر الهدايا الإلكترونية</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mohammed-hani69.github.io/img/منصة%20خدمات%20محلية%20-%20مشروع%20تخرج.jpeg</image:loc>
+      <image:title>منصة خدمات محلية</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mohammed-hani69.github.io/img/اكتشف%20مصر.jpeg</image:loc>
+      <image:title>Discover Egypt - موقع شركة سياحة</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mohammed-hani69.github.io/img/خدمات%20مدينة%20العبور.jpeg</image:loc>
+      <image:title>موقع تجارة إلكترونية</image:title>
+    </image:image>
+  </url>
+</urlset>

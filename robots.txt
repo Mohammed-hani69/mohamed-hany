@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Allow: /img/
+Allow: /*.html
+Allow: /*.js
+Allow: /*.css
+
+Disallow: /private/
+Disallow: /*.pdf$
+
+# تحديد معدل الزحف
+Crawl-delay: 0
+
+# رابط خريطة الموقع
+Sitemap: https://mohammed-hani69.github.io/sitemap.xml
+Sitemap: https://mohammed-hani69.github.io/sitemap-ar.xml
+
+# تحسين ظهور الموقع
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /

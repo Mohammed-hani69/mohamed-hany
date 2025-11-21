@@ -1,0 +1,91 @@
+# SEO و Performance Optimization
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # إزالة www
+  RewriteCond %{HTTP_HOST} ^www\.
+  RewriteRule ^(.*)$ https://%{HTTP_HOST:www.}%{REQUEST_URI} [R=301,L]
+  
+  # HTTP to HTTPS
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+  
+  # إضافة trailing slash
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^([^\.]+)$ $1/ [R=301,L]
+</IfModule>
+
+# Gzip Compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE font/opentype
+</IfModule>
+
+# Caching Headers
+<IfModule mod_expires.c>
+  ExpiresActive On
+  
+  # HTML - تحديث كل 8 ساعات
+  ExpiresByType text/html "access plus 8 hours"
+  
+  # CSS, JavaScript - تخزين 30 يوم
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  
+  # صور - تخزين 3 أشهر
+  ExpiresByType image/jpeg "access plus 3 months"
+  ExpiresByType image/gif "access plus 3 months"
+  ExpiresByType image/png "access plus 3 months"
+  ExpiresByType image/webp "access plus 3 months"
+  ExpiresByType image/svg+xml "access plus 3 months"
+  
+  # Fonts - تخزين 6 أشهر
+  ExpiresByType font/truetype "access plus 6 months"
+  ExpiresByType font/opentype "access plus 6 months"
+  ExpiresByType application/x-font-woff "access plus 6 months"
+  ExpiresByType application/x-font-woff2 "access plus 6 months"
+  
+  # Default
+  ExpiresDefault "access plus 2 days"
+</IfModule>
+
+# Header Optimization
+<IfModule mod_headers.c>
+  # Security Headers
+  Header set X-UA-Compatible "IE=edge"
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  
+  # CORS Headers
+  Header set Access-Control-Allow-Origin "*"
+  Header set Access-Control-Allow-Methods "GET, OPTIONS"
+  
+  # Performance Headers
+  Header set Content-Security-Policy "default-src 'self' 'unsafe-inline' 'unsafe-eval' https: data:; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com data:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://apis.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com"
+</IfModule>
+
+# Remove ETags
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
+FileETag None
+
+# Block access to sensitive files
+<FilesMatch "\.(env|json|lock|md)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
