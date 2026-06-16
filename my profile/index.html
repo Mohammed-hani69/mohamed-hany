@@ -872,7 +872,7 @@
                 <div class="certificate-icon">🎓</div>
                 <div class="certificate-info">
                                     <h3 class="certificate-title" data-ar="بكالوريوس نظم المعلومات" data-en="Bachelor of Information Systems">بكالوريوس نظم المعلومات</h3>
-                  <p class="certificate-issuer" data-ar="جامعة العبور - كلية الحاسبات والمعلومات" data-en="Benha University - Faculty of Computers and Information">جامعة بنها - كلية الحاسبات والمعلومات</p>
+                  <p class="certificate-issuer" data-ar="جامعة العبور - كلية الحاسبات والمعلومات" data-en="Al-Obour University - Faculty of Computers and Information">جامعة العبور - كلية الحاسبات والمعلومات</p>
                   <p class="certificate-date">2021 - 2025</p>
                 </div>
               </div>
@@ -930,6 +930,90 @@
             <h2 data-ar="الخبرات والمشاريع" data-en="Experience & Projects">خبرات ومشاريع</h2>
           </div>
           <div class="timeline">
+            <div
+              class="timeline-item"
+              onclick="openProject('https://expomasr.online')"
+            >
+              <div class="project-image">
+                <img
+                  src="img/expomasr.jpg"
+                  alt="معرض مصر 2026 الرقمي"
+                />
+              </div>
+              <div class="project-content">
+                <h3>
+                  معرض مصر 2026 الرقمي – expomasr.online
+                  <span class="project-link">🔗</span>
+                </h3>
+                <div class="description collapsed" id="desc9">
+                  <p>
+                    موقع تفاعلي لمعرض افتراضي للعقارات والتشييد، مبني بـ React 19 + TypeScript + Vite مع Backend Flask + SQLite. يشمل 9 قطاعات عرض، 4 باقات تسويقية، نموذج حجز الأجنحة مع Validation والتحقق من الأرقام المصرية، لوحة تحكم المشرف (Flask Admin)، توليد PDF للتذكرة يدعم العربية، مؤقت تنازلي، ومعرض أجنحة تفاعلي.
+                  </p>
+                </div>
+                <span
+                  class="read-more"
+                  onclick="event.stopPropagation(); toggleDescription('desc9', this)"
+                  >قراءة المزيد</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="timeline-item"
+              onclick="openProject('https://treeda.online')"
+            >
+              <div class="project-image">
+                <img
+                  src="img/treeda.jpg"
+                  alt="تريدا أكسبو"
+                />
+              </div>
+              <div class="project-content">
+                <h3>
+                  تريدا أكسبو – treeda.online
+                  <span class="project-link">🔗</span>
+                </h3>
+                <div class="description collapsed" id="desc10">
+                  <p>
+                    منصة معرض إلكتروني افتراضي للمدارس تربط أولياء الأمور بالمدارس رقمياً. مبني بـ Python Flask + Bootstrap 5.3 RTL مع SQLite/PostgreSQL. يشمل لوحات تحكم لـ Admin، School، Parent، باقات اشتراك مرنة، نظام قبول/رفض للوسائط، مساعد ذكي (AI Chatbot)، إحصائيات وتحليلات، ودعم كامل للعربية والإنجليزية مع وضع داكن/فاتح.
+                  </p>
+                </div>
+                <span
+                  class="read-more"
+                  onclick="event.stopPropagation(); toggleDescription('desc10', this)"
+                  >قراءة المزيد</span
+                >
+              </div>
+            </div>
+
+            <div
+              class="timeline-item"
+              onclick="openProject('https://digital.expomasr.online')"
+            >
+              <div class="project-image">
+                <img
+                  src="img/arkan-os.jpg"
+                  alt="أرْكَان OS"
+                />
+              </div>
+              <div class="project-content">
+                <h3>
+                  أرْكَان OS – digital.expomasr.online
+                  <span class="project-link">🔗</span>
+                </h3>
+                <div class="description collapsed" id="desc11">
+                  <p>
+                    منصة أرْكَان OS لتطوير المصانع الذكية، برعاية expomasr.online. موقع تفاعلي بهوية بصرية صناعية احترافية يشمل: واجهة Shock Hero بإحصائيات صادمة، كشف المشاكل التشغيلية، خارطة طريق رقمية بأربع مراحل، محاكي المعرض الذكي (Smart Showroom)، نظام CRM تفاعلي، مخطط أتمتة CNC و ERP، حاسبة ROI لحصر الفاقد، مقارنة Before/After، ورؤية مستقبلية بخطط النمو.
+                  </p>
+                </div>
+                <span
+                  class="read-more"
+                  onclick="event.stopPropagation(); toggleDescription('desc11', this)"
+                  >قراءة المزيد</span
+                >
+              </div>
+            </div>
+
             <div
               class="timeline-item"
               onclick="openProject('https://github.com/your-username/graduation-project')"
@@ -1406,7 +1490,7 @@
           "educationalLevel": "Bachelor Degree",
           "recognizedBy": {
             "@type": "Organization",
-            "name": "جامعة بنها - كلية الحاسبات والمعلومات"
+            "name": "جامعة العبور - كلية الحاسبات والمعلومات"
           }
         },
         {
